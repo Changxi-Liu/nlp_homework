@@ -1,0 +1,4 @@
+*.pyc
+resources/
+CLNER_datasets/
+*.txt

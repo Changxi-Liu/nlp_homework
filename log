@@ -1,0 +1,127 @@
+/home/miao/anaconda3/envs/nlp-3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/miao/anaconda3/envs/nlp-3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/miao/anaconda3/envs/nlp-3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/miao/anaconda3/envs/nlp-3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:529: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/miao/anaconda3/envs/nlp-3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:530: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/miao/anaconda3/envs/nlp-3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:535: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+2022-04-01 16:44:13,252 Reading data from /home/miao/6207/lcx/CLNER/CLNER_datasets/wnut17_bertscore_eos_doc_full
+2022-04-01 16:44:13,252 Train: /home/miao/6207/lcx/CLNER/CLNER_datasets/wnut17_bertscore_eos_doc_full/train.txt
+2022-04-01 16:44:13,252 Dev: /home/miao/6207/lcx/CLNER/CLNER_datasets/wnut17_bertscore_eos_doc_full/dev.txt
+2022-04-01 16:44:13,252 Test: /home/miao/6207/lcx/CLNER/CLNER_datasets/wnut17_bertscore_eos_doc_full/test.txt
+2022-04-01 16:44:22,580 {b'<unk>': 0, b'O': 1, b'B-location': 2, b'I-location': 3, b'E-location': 4, b'S-location': 5, b'S-X': 6, b'S-group': 7, b'S-corporation': 8, b'S-person': 9, b'S-creative-work': 10, b'S-product': 11, b'B-person': 12, b'E-person': 13, b'B-creative-work': 14, b'I-creative-work': 15, b'E-creative-work': 16, b'B-corporation': 17, b'I-corporation': 18, b'E-corporation': 19, b'B-group': 20, b'I-group': 21, b'E-group': 22, b'I-person': 23, b'B-product': 24, b'I-product': 25, b'E-product': 26, b'<START>': 27, b'<STOP>': 28}
+2022-04-01 16:44:22,580 Corpus: 6788 train + 1009 dev + 1287 test sentences
+/home/miao/6207/lcx/CLNER/flair/utils/params.py:104: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  dict_merge.dict_merge(params_dict, yaml.load(f))
+[2022-04-01 16:44:23,569 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/xlm-roberta-large-config.json from cache at /home/miao/.cache/torch/transformers/5ac6d3984e5ca7c5227e4821c65d341900125db538c5f09a1ead14f380def4a7.aa59609b4f56f82fa7699f0d47997566ccc4cf07e484f3a7bc883bd7c5a34488
+[2022-04-01 16:44:23,570 INFO] Model config XLMRobertaConfig {
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "output_past": true,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 250002
+}
+
+[2022-04-01 16:44:24,569 INFO] loading file https://s3.amazonaws.com/models.huggingface.co/bert/xlm-roberta-large-sentencepiece.bpe.model from cache at /home/miao/.cache/torch/transformers/f7e58cf8eef122765ff522a4c7c0805d2fe8871ec58dcb13d0c2764ea3e4a0f3.309f0c29486cffc28e1e40a2ab0ac8f500c203fe080b95f820aa9cb58e5b84ed
+[2022-04-01 16:44:26,004 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/xlm-roberta-large-config.json from cache at /home/miao/.cache/torch/transformers/5ac6d3984e5ca7c5227e4821c65d341900125db538c5f09a1ead14f380def4a7.aa59609b4f56f82fa7699f0d47997566ccc4cf07e484f3a7bc883bd7c5a34488
+[2022-04-01 16:44:26,005 INFO] Model config XLMRobertaConfig {
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "output_hidden_states": true,
+  "output_past": true,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 250002
+}
+
+[2022-04-01 16:44:26,200 INFO] loading weights file https://cdn.huggingface.co/xlm-roberta-large-pytorch_model.bin from cache at /home/miao/.cache/torch/transformers/a89d1c4637c1ea5ecd460c2a7c06a03acc9a961fc8c59aa2dd76d8a7f1e94536.2f41fe28a80f2730715b795242a01fc3dda846a85e7903adb3907dc5c5a498bf
+[2022-04-01 16:44:39,946 INFO] All model checkpoint weights were used when initializing XLMRobertaModel.
+
+[2022-04-01 16:44:39,947 INFO] All the weights of XLMRobertaModel were initialized from the model checkpoint at xlm-roberta-large.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use XLMRobertaModel for predictions without further training.
+2022-04-01 16:44:43,838 Model Size: 559920998
+Corpus: 6788 train + 1009 dev + 1287 test sentences
+2022-04-01 16:44:43,860 ----------------------------------------------------------------------------------------------------
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/trainers/finetune_trainer.py 2107 <module>
+2022-04-01 16:44:43,861 loading file resources/taggers/xlmr-first_10epoch_2batch_2accumulate_0.000005lr_10000lrrate_eng_monolingual_crf_fast_norelearn_sentbatch_sentloss_finetune_nodev_wnut_doc_full_bertscore_eos_ner9/best-model.pt
+[2022-04-01 16:44:48,072 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/xlm-roberta-large-config.json from cache at /home/miao/.cache/torch/transformers/5ac6d3984e5ca7c5227e4821c65d341900125db538c5f09a1ead14f380def4a7.aa59609b4f56f82fa7699f0d47997566ccc4cf07e484f3a7bc883bd7c5a34488
+[2022-04-01 16:44:48,073 INFO] Model config XLMRobertaConfig {
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "output_past": true,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 250002
+}
+
+[2022-04-01 16:44:49,084 INFO] loading file https://s3.amazonaws.com/models.huggingface.co/bert/xlm-roberta-large-sentencepiece.bpe.model from cache at /home/miao/.cache/torch/transformers/f7e58cf8eef122765ff522a4c7c0805d2fe8871ec58dcb13d0c2764ea3e4a0f3.309f0c29486cffc28e1e40a2ab0ac8f500c203fe080b95f820aa9cb58e5b84ed
+2022-04-01 16:44:49,562 Testing using best model ...
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/trainers/finetune_trainer.py 2138 <module> <torch.utils.data.dataset.ConcatDataset object at 0x7f3dd134b6d8>
+2022-04-01 16:44:51,594 xlm-roberta-large 559890432
+2022-04-01 16:44:51,594 first
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/trainers/distillation_trainer.py 1200 final_test
+2022-04-01 16:47:03,981 Finished Embeddings Assignments
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2623
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2633 resources/taggers/xlmr-first_10epoch_2batch_2accumulate_0.000005lr_10000lrrate_eng_monolingual_crf_fast_norelearn_sentbatch_sentloss_finetune_nodev_wnut_doc_full_bertscore_eos_ner9/test.tsv
+2022-04-01 16:56:19,064 0.9837	0.9901	0.9869
+2022-04-01 16:56:19,064 
+MICRO_AVG: acc 0.9741 - f1-score 0.9869
+MACRO_AVG: acc 0.9688 - f1-score 0.9840833333333334
+corporation tp: 440 - fp: 7 - fn: 2 - tn: 440 - precision: 0.9843 - recall: 0.9955 - accuracy: 0.9800 - f1-score: 0.9899
+creative-work tp: 278 - fp: 14 - fn: 2 - tn: 278 - precision: 0.9521 - recall: 0.9929 - accuracy: 0.9456 - f1-score: 0.9721
+group      tp: 523 - fp: 19 - fn: 5 - tn: 523 - precision: 0.9649 - recall: 0.9905 - accuracy: 0.9561 - f1-score: 0.9775
+location   tp: 1086 - fp: 13 - fn: 10 - tn: 1086 - precision: 0.9882 - recall: 0.9909 - accuracy: 0.9793 - f1-score: 0.9895
+person     tp: 1304 - fp: 7 - fn: 16 - tn: 1304 - precision: 0.9947 - recall: 0.9879 - accuracy: 0.9827 - f1-score: 0.9913
+product    tp: 280 - fp: 5 - fn: 4 - tn: 280 - precision: 0.9825 - recall: 0.9859 - accuracy: 0.9689 - f1-score: 0.9842
+2022-04-01 16:56:19,064 ----------------------------------------------------------------------------------------------------

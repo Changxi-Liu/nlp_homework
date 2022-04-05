@@ -1,0 +1,998 @@
+/home/miao/anaconda3/envs/nlp-3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:526: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/miao/anaconda3/envs/nlp-3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:527: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/miao/anaconda3/envs/nlp-3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:528: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/miao/anaconda3/envs/nlp-3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:529: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/miao/anaconda3/envs/nlp-3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:530: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/miao/anaconda3/envs/nlp-3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:535: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+2022-04-04 18:39:37,580 Reading data from /home/miao/6207/lcx/CLNER/CLNER_datasets/wnut16_bertscore_eos_doc_full_iter2
+2022-04-04 18:39:37,580 Train: /home/miao/6207/lcx/CLNER/CLNER_datasets/wnut16_bertscore_eos_doc_full_iter2/train.txt
+2022-04-04 18:39:37,580 Dev: /home/miao/6207/lcx/CLNER/CLNER_datasets/wnut16_bertscore_eos_doc_full_iter2/dev.txt
+2022-04-04 18:39:37,580 Test: /home/miao/6207/lcx/CLNER/CLNER_datasets/wnut16_bertscore_eos_doc_full_iter2/test.txt
+2022-04-04 18:39:47,414 {b'<unk>': 0, b'O': 1, b'S-X': 2, b'S-loc': 3, b'B-facility': 4, b'E-facility': 5, b'B-movie': 6, b'E-movie': 7, b'S-company': 8, b'S-product': 9, b'S-person': 10, b'B-other': 11, b'E-other': 12, b'B-sportsteam': 13, b'E-sportsteam': 14, b'I-other': 15, b'B-product': 16, b'I-product': 17, b'E-product': 18, b'B-company': 19, b'E-company': 20, b'B-person': 21, b'E-person': 22, b'B-loc': 23, b'E-loc': 24, b'S-other': 25, b'I-facility': 26, b'S-sportsteam': 27, b'S-tvshow': 28, b'B-musicartist': 29, b'E-musicartist': 30, b'S-facility': 31, b'I-musicartist': 32, b'B-tvshow': 33, b'E-tvshow': 34, b'I-person': 35, b'S-musicartist': 36, b'I-loc': 37, b'I-company': 38, b'I-movie': 39, b'S-movie': 40, b'I-tvshow': 41, b'I-sportsteam': 42, b'<START>': 43, b'<STOP>': 44}
+2022-04-04 18:39:47,414 Corpus: 2394 train + 1000 dev + 3850 test sentences
+/home/miao/6207/lcx/CLNER/flair/utils/params.py:104: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  dict_merge.dict_merge(params_dict, yaml.load(f))
+[2022-04-04 18:39:48,464 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/xlm-roberta-large-config.json from cache at /home/miao/.cache/torch/transformers/5ac6d3984e5ca7c5227e4821c65d341900125db538c5f09a1ead14f380def4a7.aa59609b4f56f82fa7699f0d47997566ccc4cf07e484f3a7bc883bd7c5a34488
+[2022-04-04 18:39:48,465 INFO] Model config XLMRobertaConfig {
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "output_past": true,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 250002
+}
+
+[2022-04-04 18:39:49,497 INFO] loading file https://s3.amazonaws.com/models.huggingface.co/bert/xlm-roberta-large-sentencepiece.bpe.model from cache at /home/miao/.cache/torch/transformers/f7e58cf8eef122765ff522a4c7c0805d2fe8871ec58dcb13d0c2764ea3e4a0f3.309f0c29486cffc28e1e40a2ab0ac8f500c203fe080b95f820aa9cb58e5b84ed
+[2022-04-04 18:39:50,946 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/xlm-roberta-large-config.json from cache at /home/miao/.cache/torch/transformers/5ac6d3984e5ca7c5227e4821c65d341900125db538c5f09a1ead14f380def4a7.aa59609b4f56f82fa7699f0d47997566ccc4cf07e484f3a7bc883bd7c5a34488
+[2022-04-04 18:39:50,947 INFO] Model config XLMRobertaConfig {
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "output_hidden_states": true,
+  "output_past": true,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 250002
+}
+
+[2022-04-04 18:39:51,113 INFO] loading weights file https://cdn.huggingface.co/xlm-roberta-large-pytorch_model.bin from cache at /home/miao/.cache/torch/transformers/a89d1c4637c1ea5ecd460c2a7c06a03acc9a961fc8c59aa2dd76d8a7f1e94536.2f41fe28a80f2730715b795242a01fc3dda846a85e7903adb3907dc5c5a498bf
+[2022-04-04 18:40:04,962 INFO] All model checkpoint weights were used when initializing XLMRobertaModel.
+
+[2022-04-04 18:40:04,962 INFO] All the weights of XLMRobertaModel were initialized from the model checkpoint at xlm-roberta-large.
+If your task is similar to the task the model of the ckeckpoint was trained on, you can already use XLMRobertaModel for predictions without further training.
+2022-04-04 18:40:08,911 Model Size: 559938582
+Corpus: 2394 train + 1000 dev + 3850 test sentences
+2022-04-04 18:40:08,929 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:40:08,931 Model: "FastSequenceTagger(
+  (embeddings): StackedEmbeddings(
+    (list_embedding_0): TransformerWordEmbeddings(
+      (model): XLMRobertaModel(
+        (embeddings): RobertaEmbeddings(
+          (word_embeddings): Embedding(250002, 1024, padding_idx=1)
+          (position_embeddings): Embedding(514, 1024, padding_idx=1)
+          (token_type_embeddings): Embedding(1, 1024)
+          (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (encoder): BertEncoder(
+          (layer): ModuleList(
+            (0): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (1): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (2): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (3): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (4): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (5): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (6): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (7): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (8): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (9): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (10): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (11): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (12): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (13): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (14): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (15): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (16): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (17): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (18): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (19): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (20): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (21): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (22): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (23): BertLayer(
+              (attention): BertAttention(
+                (self): BertSelfAttention(
+                  (query): Linear(in_features=1024, out_features=1024, bias=True)
+                  (key): Linear(in_features=1024, out_features=1024, bias=True)
+                  (value): Linear(in_features=1024, out_features=1024, bias=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+                (output): BertSelfOutput(
+                  (dense): Linear(in_features=1024, out_features=1024, bias=True)
+                  (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                  (dropout): Dropout(p=0.1, inplace=False)
+                )
+              )
+              (intermediate): BertIntermediate(
+                (dense): Linear(in_features=1024, out_features=4096, bias=True)
+              )
+              (output): BertOutput(
+                (dense): Linear(in_features=4096, out_features=1024, bias=True)
+                (LayerNorm): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+          )
+        )
+        (pooler): BertPooler(
+          (dense): Linear(in_features=1024, out_features=1024, bias=True)
+          (activation): Tanh()
+        )
+      )
+    )
+  )
+  (word_dropout): WordDropout(p=0.1)
+  (linear): Linear(in_features=1024, out_features=45, bias=True)
+)"
+2022-04-04 18:40:08,931 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:40:08,931 Corpus: "Corpus: 2394 train + 1000 dev + 3850 test sentences"
+2022-04-04 18:40:08,931 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:40:08,931 Parameters:
+2022-04-04 18:40:08,931  - Optimizer: "AdamW"
+2022-04-04 18:40:08,931  - learning_rate: "5e-06"
+2022-04-04 18:40:08,932  - mini_batch_size: "2"
+2022-04-04 18:40:08,932  - patience: "10"
+2022-04-04 18:40:08,932  - anneal_factor: "0.5"
+2022-04-04 18:40:08,932  - max_epochs: "10"
+2022-04-04 18:40:08,932  - shuffle: "True"
+2022-04-04 18:40:08,932  - train_with_dev: "False"
+2022-04-04 18:40:08,932  - word min_freq: "-1"
+2022-04-04 18:40:08,932 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:40:08,932 Model training base path: "resources/taggers/wnut16_epoch102"
+2022-04-04 18:40:08,932 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:40:08,932 Device: cuda:0
+2022-04-04 18:40:08,932 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:40:08,932 Embeddings storage mode: none
+2022-04-04 18:40:10,046 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:40:10,048 Current loss interpolation: 1
+['xlm-roberta-large']
+2022-04-04 18:40:11,110 epoch 1 - iter 0/1197 - loss 495.79766846 - samples/sec: 1.88 - decode_sents/sec: 71.82
+2022-04-04 18:40:45,672 epoch 1 - iter 119/1197 - loss 188.33543069 - samples/sec: 7.79 - decode_sents/sec: 5150.05
+2022-04-04 18:41:20,843 epoch 1 - iter 238/1197 - loss 111.19580054 - samples/sec: 7.61 - decode_sents/sec: 6539.86
+2022-04-04 18:41:56,416 epoch 1 - iter 357/1197 - loss 80.80938999 - samples/sec: 7.53 - decode_sents/sec: 5538.08
+2022-04-04 18:42:32,007 epoch 1 - iter 476/1197 - loss 64.83323914 - samples/sec: 7.50 - decode_sents/sec: 3357.35
+2022-04-04 18:43:07,043 epoch 1 - iter 595/1197 - loss 55.10842359 - samples/sec: 7.68 - decode_sents/sec: 4931.96
+2022-04-04 18:43:41,296 epoch 1 - iter 714/1197 - loss 48.12473936 - samples/sec: 7.86 - decode_sents/sec: 5361.23
+2022-04-04 18:44:15,352 epoch 1 - iter 833/1197 - loss 42.82607082 - samples/sec: 7.93 - decode_sents/sec: 3341.86
+2022-04-04 18:44:49,241 epoch 1 - iter 952/1197 - loss 38.86951815 - samples/sec: 7.93 - decode_sents/sec: 6498.86
+2022-04-04 18:45:24,353 epoch 1 - iter 1071/1197 - loss 35.78421095 - samples/sec: 7.63 - decode_sents/sec: 6887.06
+2022-04-04 18:45:58,214 epoch 1 - iter 1190/1197 - loss 33.24743480 - samples/sec: 7.93 - decode_sents/sec: 5979.12
+2022-04-04 18:46:00,301 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:46:00,301 EPOCH 1 done: loss 16.5704 - lr 0.05
+2022-04-04 18:46:00,301 ----------------------------------------------------------------------------------------------------
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2623
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2633 None
+2022-04-04 18:46:55,274 Macro Average: 48.69	Macro avg loss: 2.19
+ColumnCorpus-WNUTDOCFULL	48.69	
+2022-04-04 18:46:55,304 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:46:55,304 BAD EPOCHS (no improvement): 11
+2022-04-04 18:46:55,304 GLOBAL BAD EPOCHS (no improvement): 0
+2022-04-04 18:46:55,304 ==================Saving the current best model: 48.69==================
+2022-04-04 18:46:58,532 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:46:58,534 Current loss interpolation: 1
+['xlm-roberta-large']
+2022-04-04 18:46:58,800 epoch 2 - iter 0/1197 - loss 10.87741089 - samples/sec: 7.54 - decode_sents/sec: 39.57
+2022-04-04 18:47:33,374 epoch 2 - iter 119/1197 - loss 9.82182360 - samples/sec: 7.77 - decode_sents/sec: 5158.11
+2022-04-04 18:48:08,320 epoch 2 - iter 238/1197 - loss 9.93425497 - samples/sec: 7.67 - decode_sents/sec: 2892.86
+2022-04-04 18:48:43,382 epoch 2 - iter 357/1197 - loss 9.73046482 - samples/sec: 7.65 - decode_sents/sec: 4032.69
+2022-04-04 18:49:18,394 epoch 2 - iter 476/1197 - loss 9.41542239 - samples/sec: 7.65 - decode_sents/sec: 3882.12
+2022-04-04 18:49:53,188 epoch 2 - iter 595/1197 - loss 9.28865449 - samples/sec: 7.74 - decode_sents/sec: 10402.06
+2022-04-04 18:50:27,743 epoch 2 - iter 714/1197 - loss 9.14494889 - samples/sec: 7.76 - decode_sents/sec: 5581.31
+2022-04-04 18:51:02,790 epoch 2 - iter 833/1197 - loss 9.02858643 - samples/sec: 7.66 - decode_sents/sec: 4698.24
+2022-04-04 18:51:37,403 epoch 2 - iter 952/1197 - loss 8.86272558 - samples/sec: 7.78 - decode_sents/sec: 4583.54
+2022-04-04 18:52:12,020 epoch 2 - iter 1071/1197 - loss 8.80705724 - samples/sec: 7.78 - decode_sents/sec: 4441.00
+2022-04-04 18:52:45,784 epoch 2 - iter 1190/1197 - loss 8.81043003 - samples/sec: 7.95 - decode_sents/sec: 3191.35
+2022-04-04 18:52:47,419 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:52:47,419 EPOCH 2 done: loss 4.3978 - lr 0.045000000000000005
+2022-04-04 18:52:47,419 ----------------------------------------------------------------------------------------------------
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2623
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2633 None
+2022-04-04 18:53:39,047 Macro Average: 54.27	Macro avg loss: 2.26
+ColumnCorpus-WNUTDOCFULL	54.27	
+2022-04-04 18:53:39,082 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:53:39,082 BAD EPOCHS (no improvement): 11
+2022-04-04 18:53:39,082 GLOBAL BAD EPOCHS (no improvement): 0
+2022-04-04 18:53:39,082 ==================Saving the current best model: 54.269999999999996==================
+2022-04-04 18:53:47,115 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:53:47,122 Current loss interpolation: 1
+['xlm-roberta-large']
+2022-04-04 18:53:47,240 epoch 3 - iter 0/1197 - loss 0.09063721 - samples/sec: 16.88 - decode_sents/sec: 112.55
+2022-04-04 18:54:21,686 epoch 3 - iter 119/1197 - loss 6.71429478 - samples/sec: 7.84 - decode_sents/sec: 5656.77
+2022-04-04 18:54:56,627 epoch 3 - iter 238/1197 - loss 6.85024613 - samples/sec: 7.72 - decode_sents/sec: 4197.43
+2022-04-04 18:55:30,487 epoch 3 - iter 357/1197 - loss 6.66617072 - samples/sec: 7.95 - decode_sents/sec: 11413.59
+2022-04-04 18:56:07,974 epoch 3 - iter 476/1197 - loss 7.05825647 - samples/sec: 7.10 - decode_sents/sec: 3664.47
+2022-04-04 18:56:42,027 epoch 3 - iter 595/1197 - loss 7.01601350 - samples/sec: 7.96 - decode_sents/sec: 6154.94
+2022-04-04 18:57:17,464 epoch 3 - iter 714/1197 - loss 6.97960685 - samples/sec: 7.54 - decode_sents/sec: 18622.57
+2022-04-04 18:57:51,239 epoch 3 - iter 833/1197 - loss 6.91680826 - samples/sec: 8.03 - decode_sents/sec: 3785.56
+2022-04-04 18:58:27,466 epoch 3 - iter 952/1197 - loss 6.98044312 - samples/sec: 7.33 - decode_sents/sec: 5433.83
+2022-04-04 18:59:02,798 epoch 3 - iter 1071/1197 - loss 6.93468928 - samples/sec: 7.60 - decode_sents/sec: 5367.83
+2022-04-04 18:59:36,947 epoch 3 - iter 1190/1197 - loss 7.04707506 - samples/sec: 7.86 - decode_sents/sec: 7186.37
+2022-04-04 18:59:38,713 ----------------------------------------------------------------------------------------------------
+2022-04-04 18:59:38,713 EPOCH 3 done: loss 3.5156 - lr 0.04000000000000001
+2022-04-04 18:59:38,713 ----------------------------------------------------------------------------------------------------
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2623
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2633 None
+2022-04-04 19:00:30,759 Macro Average: 56.32	Macro avg loss: 2.28
+ColumnCorpus-WNUTDOCFULL	56.32	
+2022-04-04 19:00:30,805 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:00:30,805 BAD EPOCHS (no improvement): 11
+2022-04-04 19:00:30,805 GLOBAL BAD EPOCHS (no improvement): 0
+2022-04-04 19:00:30,805 ==================Saving the current best model: 56.32==================
+2022-04-04 19:00:38,543 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:00:38,549 Current loss interpolation: 1
+['xlm-roberta-large']
+2022-04-04 19:00:38,824 epoch 4 - iter 0/1197 - loss 2.87023926 - samples/sec: 7.28 - decode_sents/sec: 37.07
+2022-04-04 19:01:10,902 epoch 4 - iter 119/1197 - loss 5.66259623 - samples/sec: 8.43 - decode_sents/sec: 6888.67
+2022-04-04 19:01:45,802 epoch 4 - iter 238/1197 - loss 5.48368835 - samples/sec: 7.68 - decode_sents/sec: 4583.83
+2022-04-04 19:02:21,265 epoch 4 - iter 357/1197 - loss 5.74351519 - samples/sec: 7.57 - decode_sents/sec: 5383.32
+2022-04-04 19:02:54,487 epoch 4 - iter 476/1197 - loss 5.76966639 - samples/sec: 8.19 - decode_sents/sec: 2956.42
+2022-04-04 19:03:28,645 epoch 4 - iter 595/1197 - loss 5.84525250 - samples/sec: 7.91 - decode_sents/sec: 3017.69
+2022-04-04 19:04:03,674 epoch 4 - iter 714/1197 - loss 5.93156324 - samples/sec: 7.66 - decode_sents/sec: 7496.58
+2022-04-04 19:04:40,923 epoch 4 - iter 833/1197 - loss 5.83804944 - samples/sec: 7.13 - decode_sents/sec: 5522.91
+2022-04-04 19:05:16,813 epoch 4 - iter 952/1197 - loss 5.84359627 - samples/sec: 7.44 - decode_sents/sec: 8303.34
+2022-04-04 19:05:53,490 epoch 4 - iter 1071/1197 - loss 5.85618066 - samples/sec: 7.27 - decode_sents/sec: 5614.90
+2022-04-04 19:06:27,695 epoch 4 - iter 1190/1197 - loss 5.90061255 - samples/sec: 7.88 - decode_sents/sec: 4333.02
+2022-04-04 19:06:29,595 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:06:29,595 EPOCH 4 done: loss 2.9665 - lr 0.034999999999999996
+2022-04-04 19:06:29,595 ----------------------------------------------------------------------------------------------------
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2623
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2633 None
+2022-04-04 19:07:22,914 Macro Average: 55.27	Macro avg loss: 2.59
+ColumnCorpus-WNUTDOCFULL	55.27	
+2022-04-04 19:07:22,968 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:07:22,969 BAD EPOCHS (no improvement): 11
+2022-04-04 19:07:22,969 GLOBAL BAD EPOCHS (no improvement): 1
+2022-04-04 19:07:22,969 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:07:22,971 Current loss interpolation: 1
+['xlm-roberta-large']
+2022-04-04 19:07:23,139 epoch 5 - iter 0/1197 - loss 0.80043030 - samples/sec: 11.86 - decode_sents/sec: 38.59
+2022-04-04 19:07:59,130 epoch 5 - iter 119/1197 - loss 5.77674723 - samples/sec: 7.49 - decode_sents/sec: 7813.13
+2022-04-04 19:08:32,941 epoch 5 - iter 238/1197 - loss 5.22536412 - samples/sec: 7.94 - decode_sents/sec: 6327.61
+2022-04-04 19:09:06,276 epoch 5 - iter 357/1197 - loss 5.25111572 - samples/sec: 8.12 - decode_sents/sec: 10208.15
+2022-04-04 19:09:41,536 epoch 5 - iter 476/1197 - loss 5.33313872 - samples/sec: 7.58 - decode_sents/sec: 7375.99
+2022-04-04 19:10:16,375 epoch 5 - iter 595/1197 - loss 5.34214423 - samples/sec: 7.74 - decode_sents/sec: 5663.16
+2022-04-04 19:10:50,830 epoch 5 - iter 714/1197 - loss 5.30809727 - samples/sec: 7.79 - decode_sents/sec: 4035.51
+2022-04-04 19:11:24,803 epoch 5 - iter 833/1197 - loss 5.34716308 - samples/sec: 7.98 - decode_sents/sec: 3370.51
+2022-04-04 19:12:00,095 epoch 5 - iter 952/1197 - loss 5.33455791 - samples/sec: 7.60 - decode_sents/sec: 3927.64
+2022-04-04 19:12:36,052 epoch 5 - iter 1071/1197 - loss 5.28551207 - samples/sec: 7.41 - decode_sents/sec: 7264.93
+2022-04-04 19:13:12,010 epoch 5 - iter 1190/1197 - loss 5.28502665 - samples/sec: 7.41 - decode_sents/sec: 5935.43
+2022-04-04 19:13:13,635 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:13:13,635 EPOCH 5 done: loss 2.6377 - lr 0.03
+2022-04-04 19:13:13,635 ----------------------------------------------------------------------------------------------------
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2623
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2633 None
+2022-04-04 19:14:04,898 Macro Average: 56.54	Macro avg loss: 2.65
+ColumnCorpus-WNUTDOCFULL	56.54	
+2022-04-04 19:14:04,943 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:14:04,943 BAD EPOCHS (no improvement): 11
+2022-04-04 19:14:04,943 GLOBAL BAD EPOCHS (no improvement): 0
+2022-04-04 19:14:04,943 ==================Saving the current best model: 56.54==================
+2022-04-04 19:14:13,362 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:14:13,368 Current loss interpolation: 1
+['xlm-roberta-large']
+2022-04-04 19:14:13,684 epoch 6 - iter 0/1197 - loss 8.80297852 - samples/sec: 6.34 - decode_sents/sec: 26.58
+2022-04-04 19:14:46,474 epoch 6 - iter 119/1197 - loss 4.53487148 - samples/sec: 8.27 - decode_sents/sec: 8777.16
+2022-04-04 19:15:22,173 epoch 6 - iter 238/1197 - loss 4.60907850 - samples/sec: 7.48 - decode_sents/sec: 3110.91
+2022-04-04 19:15:57,158 epoch 6 - iter 357/1197 - loss 4.52453011 - samples/sec: 7.66 - decode_sents/sec: 3414.86
+2022-04-04 19:16:32,203 epoch 6 - iter 476/1197 - loss 4.46163572 - samples/sec: 7.64 - decode_sents/sec: 5015.95
+2022-04-04 19:17:06,250 epoch 6 - iter 595/1197 - loss 4.58675519 - samples/sec: 7.90 - decode_sents/sec: 5283.84
+2022-04-04 19:17:40,335 epoch 6 - iter 714/1197 - loss 4.56800490 - samples/sec: 7.89 - decode_sents/sec: 5335.84
+2022-04-04 19:18:17,768 epoch 6 - iter 833/1197 - loss 4.74930133 - samples/sec: 7.18 - decode_sents/sec: 6656.47
+2022-04-04 19:18:52,519 epoch 6 - iter 952/1197 - loss 4.67826747 - samples/sec: 7.71 - decode_sents/sec: 4409.48
+2022-04-04 19:19:27,523 epoch 6 - iter 1071/1197 - loss 4.68549287 - samples/sec: 7.71 - decode_sents/sec: 5585.65
+2022-04-04 19:20:02,955 epoch 6 - iter 1190/1197 - loss 4.69419005 - samples/sec: 7.58 - decode_sents/sec: 8487.75
+2022-04-04 19:20:04,873 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:20:04,873 EPOCH 6 done: loss 2.3533 - lr 0.025
+2022-04-04 19:20:04,873 ----------------------------------------------------------------------------------------------------
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2623
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2633 None
+2022-04-04 19:21:00,729 Macro Average: 54.76	Macro avg loss: 2.84
+ColumnCorpus-WNUTDOCFULL	54.76	
+2022-04-04 19:21:00,793 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:21:00,793 BAD EPOCHS (no improvement): 11
+2022-04-04 19:21:00,793 GLOBAL BAD EPOCHS (no improvement): 1
+2022-04-04 19:21:00,793 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:21:00,795 Current loss interpolation: 1
+['xlm-roberta-large']
+2022-04-04 19:21:00,984 epoch 7 - iter 0/1197 - loss 2.81945801 - samples/sec: 10.61 - decode_sents/sec: 48.00
+2022-04-04 19:21:37,322 epoch 7 - iter 119/1197 - loss 4.69383901 - samples/sec: 7.34 - decode_sents/sec: 3495.79
+2022-04-04 19:22:12,823 epoch 7 - iter 238/1197 - loss 4.50655462 - samples/sec: 7.59 - decode_sents/sec: 3788.94
+2022-04-04 19:22:47,104 epoch 7 - iter 357/1197 - loss 4.61788471 - samples/sec: 7.86 - decode_sents/sec: 3308.70
+2022-04-04 19:23:22,041 epoch 7 - iter 476/1197 - loss 4.46012816 - samples/sec: 7.73 - decode_sents/sec: 14948.48
+2022-04-04 19:23:55,918 epoch 7 - iter 595/1197 - loss 4.52089253 - samples/sec: 7.90 - decode_sents/sec: 5526.28
+2022-04-04 19:24:27,923 epoch 7 - iter 714/1197 - loss 4.44673799 - samples/sec: 8.43 - decode_sents/sec: 6079.18
+2022-04-04 19:25:00,054 epoch 7 - iter 833/1197 - loss 4.39081742 - samples/sec: 8.41 - decode_sents/sec: 4703.11
+2022-04-04 19:25:32,507 epoch 7 - iter 952/1197 - loss 4.39783040 - samples/sec: 8.24 - decode_sents/sec: 6449.11
+2022-04-04 19:26:05,537 epoch 7 - iter 1071/1197 - loss 4.36549471 - samples/sec: 8.13 - decode_sents/sec: 4765.75
+2022-04-04 19:26:39,426 epoch 7 - iter 1190/1197 - loss 4.37879989 - samples/sec: 7.92 - decode_sents/sec: 5445.42
+2022-04-04 19:26:41,137 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:26:41,137 EPOCH 7 done: loss 2.2004 - lr 0.020000000000000004
+2022-04-04 19:26:41,137 ----------------------------------------------------------------------------------------------------
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2623
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2633 None
+2022-04-04 19:27:34,021 Macro Average: 57.79	Macro avg loss: 2.92
+ColumnCorpus-WNUTDOCFULL	57.79	
+2022-04-04 19:27:34,059 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:27:34,059 BAD EPOCHS (no improvement): 11
+2022-04-04 19:27:34,059 GLOBAL BAD EPOCHS (no improvement): 0
+2022-04-04 19:27:34,059 ==================Saving the current best model: 57.79==================
+2022-04-04 19:27:42,136 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:27:42,143 Current loss interpolation: 1
+['xlm-roberta-large']
+2022-04-04 19:27:42,488 epoch 8 - iter 0/1197 - loss 7.46356201 - samples/sec: 5.81 - decode_sents/sec: 42.93
+2022-04-04 19:28:17,352 epoch 8 - iter 119/1197 - loss 4.50241407 - samples/sec: 7.74 - decode_sents/sec: 4055.76
+2022-04-04 19:28:51,060 epoch 8 - iter 238/1197 - loss 4.29211523 - samples/sec: 7.95 - decode_sents/sec: 7727.19
+2022-04-04 19:29:26,662 epoch 8 - iter 357/1197 - loss 4.16480637 - samples/sec: 7.53 - decode_sents/sec: 2773.16
+2022-04-04 19:30:00,839 epoch 8 - iter 476/1197 - loss 4.20810048 - samples/sec: 7.87 - decode_sents/sec: 6754.71
+2022-04-04 19:30:35,953 epoch 8 - iter 595/1197 - loss 4.22610665 - samples/sec: 7.65 - decode_sents/sec: 5465.64
+2022-04-04 19:31:11,644 epoch 8 - iter 714/1197 - loss 4.15617202 - samples/sec: 7.48 - decode_sents/sec: 4572.14
+2022-04-04 19:31:45,587 epoch 8 - iter 833/1197 - loss 4.17370962 - samples/sec: 7.98 - decode_sents/sec: 4024.48
+2022-04-04 19:32:20,854 epoch 8 - iter 952/1197 - loss 4.19533130 - samples/sec: 7.57 - decode_sents/sec: 4362.08
+2022-04-04 19:32:55,083 epoch 8 - iter 1071/1197 - loss 4.16070697 - samples/sec: 7.86 - decode_sents/sec: 2864.17
+2022-04-04 19:33:29,003 epoch 8 - iter 1190/1197 - loss 4.14888129 - samples/sec: 7.92 - decode_sents/sec: 5659.33
+2022-04-04 19:33:30,686 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:33:30,687 EPOCH 8 done: loss 2.0822 - lr 0.015
+2022-04-04 19:33:30,687 ----------------------------------------------------------------------------------------------------
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2623
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2633 None
+2022-04-04 19:34:22,012 Macro Average: 56.09	Macro avg loss: 3.12
+ColumnCorpus-WNUTDOCFULL	56.09	
+2022-04-04 19:34:22,066 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:34:22,066 BAD EPOCHS (no improvement): 11
+2022-04-04 19:34:22,066 GLOBAL BAD EPOCHS (no improvement): 1
+2022-04-04 19:34:22,066 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:34:22,068 Current loss interpolation: 1
+['xlm-roberta-large']
+2022-04-04 19:34:22,181 epoch 9 - iter 0/1197 - loss 0.06524658 - samples/sec: 17.70 - decode_sents/sec: 147.79
+2022-04-04 19:34:59,203 epoch 9 - iter 119/1197 - loss 3.65014489 - samples/sec: 7.20 - decode_sents/sec: 7896.94
+2022-04-04 19:35:33,097 epoch 9 - iter 238/1197 - loss 3.76270811 - samples/sec: 7.94 - decode_sents/sec: 5427.69
+2022-04-04 19:36:07,694 epoch 9 - iter 357/1197 - loss 3.71352079 - samples/sec: 7.75 - decode_sents/sec: 6143.31
+2022-04-04 19:36:41,975 epoch 9 - iter 476/1197 - loss 3.79039762 - samples/sec: 7.83 - decode_sents/sec: 6923.69
+2022-04-04 19:37:17,831 epoch 9 - iter 595/1197 - loss 3.84964039 - samples/sec: 7.45 - decode_sents/sec: 4254.20
+2022-04-04 19:37:50,725 epoch 9 - iter 714/1197 - loss 3.85844337 - samples/sec: 8.22 - decode_sents/sec: 5691.96
+2022-04-04 19:38:24,118 epoch 9 - iter 833/1197 - loss 3.82048839 - samples/sec: 8.14 - decode_sents/sec: 4237.46
+2022-04-04 19:38:58,793 epoch 9 - iter 952/1197 - loss 3.76511718 - samples/sec: 7.72 - decode_sents/sec: 6723.04
+2022-04-04 19:39:34,829 epoch 9 - iter 1071/1197 - loss 3.75740284 - samples/sec: 7.45 - decode_sents/sec: 5518.09
+2022-04-04 19:40:08,252 epoch 9 - iter 1190/1197 - loss 3.77617332 - samples/sec: 8.04 - decode_sents/sec: 5952.38
+2022-04-04 19:40:09,961 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:40:09,961 EPOCH 9 done: loss 1.8951 - lr 0.010000000000000002
+2022-04-04 19:40:09,961 ----------------------------------------------------------------------------------------------------
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2623
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2633 None
+2022-04-04 19:41:03,294 Macro Average: 57.59	Macro avg loss: 3.20
+ColumnCorpus-WNUTDOCFULL	57.59	
+2022-04-04 19:41:03,360 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:41:03,360 BAD EPOCHS (no improvement): 11
+2022-04-04 19:41:03,360 GLOBAL BAD EPOCHS (no improvement): 2
+2022-04-04 19:41:03,360 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:41:03,362 Current loss interpolation: 1
+['xlm-roberta-large']
+2022-04-04 19:41:03,504 epoch 10 - iter 0/1197 - loss 0.35632324 - samples/sec: 14.09 - decode_sents/sec: 63.41
+2022-04-04 19:41:36,635 epoch 10 - iter 119/1197 - loss 3.60677821 - samples/sec: 8.20 - decode_sents/sec: 5817.51
+2022-04-04 19:42:08,474 epoch 10 - iter 238/1197 - loss 3.74471238 - samples/sec: 8.53 - decode_sents/sec: 8294.17
+2022-04-04 19:42:43,813 epoch 10 - iter 357/1197 - loss 3.80508525 - samples/sec: 7.58 - decode_sents/sec: 5671.91
+2022-04-04 19:43:17,193 epoch 10 - iter 476/1197 - loss 4.02982598 - samples/sec: 8.03 - decode_sents/sec: 4927.12
+2022-04-04 19:43:49,893 epoch 10 - iter 595/1197 - loss 3.92082385 - samples/sec: 8.19 - decode_sents/sec: 6428.13
+2022-04-04 19:44:27,664 epoch 10 - iter 714/1197 - loss 3.91029297 - samples/sec: 7.05 - decode_sents/sec: 2877.42
+2022-04-04 19:45:05,975 epoch 10 - iter 833/1197 - loss 3.93436946 - samples/sec: 6.94 - decode_sents/sec: 5941.93
+2022-04-04 19:45:40,521 epoch 10 - iter 952/1197 - loss 3.85452441 - samples/sec: 7.74 - decode_sents/sec: 2994.37
+2022-04-04 19:46:13,507 epoch 10 - iter 1071/1197 - loss 3.82863775 - samples/sec: 8.18 - decode_sents/sec: 7697.34
+2022-04-04 19:46:48,377 epoch 10 - iter 1190/1197 - loss 3.77456450 - samples/sec: 7.75 - decode_sents/sec: 5616.76
+2022-04-04 19:46:50,179 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:46:50,179 EPOCH 10 done: loss 1.8907 - lr 0.005000000000000001
+2022-04-04 19:46:50,180 ----------------------------------------------------------------------------------------------------
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2623
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2633 None
+2022-04-04 19:47:38,978 Macro Average: 57.95	Macro avg loss: 3.15
+ColumnCorpus-WNUTDOCFULL	57.95	
+2022-04-04 19:47:39,035 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:47:39,035 BAD EPOCHS (no improvement): 11
+2022-04-04 19:47:39,035 GLOBAL BAD EPOCHS (no improvement): 0
+2022-04-04 19:47:39,035 ==================Saving the current best model: 57.95==================
+2022-04-04 19:47:47,032 ----------------------------------------------------------------------------------------------------
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/trainers/finetune_trainer.py 2107 train
+2022-04-04 19:47:47,036 loading file resources/taggers/wnut16_epoch102/best-model.pt
+[2022-04-04 19:47:50,982 INFO] loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/xlm-roberta-large-config.json from cache at /home/miao/.cache/torch/transformers/5ac6d3984e5ca7c5227e4821c65d341900125db538c5f09a1ead14f380def4a7.aa59609b4f56f82fa7699f0d47997566ccc4cf07e484f3a7bc883bd7c5a34488
+[2022-04-04 19:47:50,983 INFO] Model config XLMRobertaConfig {
+  "architectures": [
+    "XLMRobertaForMaskedLM"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "eos_token_id": 2,
+  "gradient_checkpointing": false,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 1024,
+  "initializer_range": 0.02,
+  "intermediate_size": 4096,
+  "layer_norm_eps": 1e-05,
+  "max_position_embeddings": 514,
+  "model_type": "xlm-roberta",
+  "num_attention_heads": 16,
+  "num_hidden_layers": 24,
+  "output_past": true,
+  "pad_token_id": 1,
+  "type_vocab_size": 1,
+  "vocab_size": 250002
+}
+
+[2022-04-04 19:47:51,977 INFO] loading file https://s3.amazonaws.com/models.huggingface.co/bert/xlm-roberta-large-sentencepiece.bpe.model from cache at /home/miao/.cache/torch/transformers/f7e58cf8eef122765ff522a4c7c0805d2fe8871ec58dcb13d0c2764ea3e4a0f3.309f0c29486cffc28e1e40a2ab0ac8f500c203fe080b95f820aa9cb58e5b84ed
+2022-04-04 19:47:52,486 Testing using best model ...
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/trainers/finetune_trainer.py 2138 train <torch.utils.data.dataset.ConcatDataset object at 0x7fd85eb89780>
+2022-04-04 19:47:53,054 xlm-roberta-large 559890432
+2022-04-04 19:47:53,054 first
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/trainers/distillation_trainer.py 1200 final_test
+2022-04-04 19:49:36,685 Finished Embeddings Assignments
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2623
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2633 resources/taggers/wnut16_epoch102/test.tsv
+2022-04-04 19:51:00,830 0.6008	0.5816	0.591
+2022-04-04 19:51:00,830 
+MICRO_AVG: acc 0.4195 - f1-score 0.591
+MACRO_AVG: acc 0.3335 - f1-score 0.4796500000000001
+company    tp: 397 - fp: 155 - fn: 224 - tn: 397 - precision: 0.7192 - recall: 0.6393 - accuracy: 0.5116 - f1-score: 0.6769
+facility   tp: 136 - fp: 61 - fn: 117 - tn: 136 - precision: 0.6904 - recall: 0.5375 - accuracy: 0.4331 - f1-score: 0.6044
+loc        tp: 701 - fp: 293 - fn: 181 - tn: 701 - precision: 0.7052 - recall: 0.7948 - accuracy: 0.5966 - f1-score: 0.7473
+movie      tp: 10 - fp: 16 - fn: 24 - tn: 10 - precision: 0.3846 - recall: 0.2941 - accuracy: 0.2000 - f1-score: 0.3333
+musicartist tp: 48 - fp: 42 - fn: 143 - tn: 48 - precision: 0.5333 - recall: 0.2513 - accuracy: 0.2060 - f1-score: 0.3416
+other      tp: 226 - fp: 348 - fn: 358 - tn: 226 - precision: 0.3937 - recall: 0.3870 - accuracy: 0.2425 - f1-score: 0.3903
+person     tp: 398 - fp: 311 - fn: 84 - tn: 398 - precision: 0.5614 - recall: 0.8257 - accuracy: 0.5019 - f1-score: 0.6684
+product    tp: 37 - fp: 74 - fn: 209 - tn: 37 - precision: 0.3333 - recall: 0.1504 - accuracy: 0.1156 - f1-score: 0.2073
+sportsteam tp: 58 - fp: 30 - fn: 89 - tn: 58 - precision: 0.6591 - recall: 0.3946 - accuracy: 0.3277 - f1-score: 0.4937
+tvshow     tp: 9 - fp: 12 - fn: 24 - tn: 9 - precision: 0.4286 - recall: 0.2727 - accuracy: 0.2000 - f1-score: 0.3333
+2022-04-04 19:51:00,830 ----------------------------------------------------------------------------------------------------
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/trainers/finetune_trainer.py 2226 train
+2022-04-04 19:51:00,830 ----------------------------------------------------------------------------------------------------
+2022-04-04 19:51:00,830 current corpus: ColumnCorpus-WNUTDOCFULL
+2022-04-04 19:51:01,090 xlm-roberta-large 559890432
+2022-04-04 19:51:01,090 first
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/trainers/distillation_trainer.py 1200 final_test
+2022-04-04 19:51:04,669 Finished Embeddings Assignments
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2623
+[6;30;42mOutPut: [0m /home/miao/6207/lcx/CLNER/flair/models/sequence_tagger_model.py 2633 resources/taggers/wnut16_epoch102/ColumnCorpus-WNUTDOCFULL-test.tsv
+2022-04-04 19:52:25,503 0.6008	0.5816	0.591
+2022-04-04 19:52:25,503 
+MICRO_AVG: acc 0.4195 - f1-score 0.591
+MACRO_AVG: acc 0.3335 - f1-score 0.4796500000000001
+company    tp: 397 - fp: 155 - fn: 224 - tn: 397 - precision: 0.7192 - recall: 0.6393 - accuracy: 0.5116 - f1-score: 0.6769
+facility   tp: 136 - fp: 61 - fn: 117 - tn: 136 - precision: 0.6904 - recall: 0.5375 - accuracy: 0.4331 - f1-score: 0.6044
+loc        tp: 701 - fp: 293 - fn: 181 - tn: 701 - precision: 0.7052 - recall: 0.7948 - accuracy: 0.5966 - f1-score: 0.7473
+movie      tp: 10 - fp: 16 - fn: 24 - tn: 10 - precision: 0.3846 - recall: 0.2941 - accuracy: 0.2000 - f1-score: 0.3333
+musicartist tp: 48 - fp: 42 - fn: 143 - tn: 48 - precision: 0.5333 - recall: 0.2513 - accuracy: 0.2060 - f1-score: 0.3416
+other      tp: 226 - fp: 348 - fn: 358 - tn: 226 - precision: 0.3937 - recall: 0.3870 - accuracy: 0.2425 - f1-score: 0.3903
+person     tp: 398 - fp: 311 - fn: 84 - tn: 398 - precision: 0.5614 - recall: 0.8257 - accuracy: 0.5019 - f1-score: 0.6684
+product    tp: 37 - fp: 74 - fn: 209 - tn: 37 - precision: 0.3333 - recall: 0.1504 - accuracy: 0.1156 - f1-score: 0.2073
+sportsteam tp: 58 - fp: 30 - fn: 89 - tn: 58 - precision: 0.6591 - recall: 0.3946 - accuracy: 0.3277 - f1-score: 0.4937
+tvshow     tp: 9 - fp: 12 - fn: 24 - tn: 9 - precision: 0.4286 - recall: 0.2727 - accuracy: 0.2000 - f1-score: 0.3333
+
